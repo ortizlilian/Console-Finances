@@ -87,3 +87,6 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+var numberOfMonths = finances.length;
+console.log(typeof numberOfMonths);
+
