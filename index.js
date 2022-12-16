@@ -88,5 +88,29 @@ var finances = [
 ];
 
 var numberOfMonths = finances.length;
-console.log(typeof numberOfMonths);
+var total = 0
+var financesFlat = finances.flat(1);
+
+// for (let i = 0; i < financesFlat.length; i++) {
+//     if (typeof financesFlat[i] === Number) {
+//         total += financesFlat[i];
+//     }  
+// }
+
+for (let i = 0; i < finances.length; i++) {
+        total += finances[i][1];
+}
+
+console.log(numberOfMonths);
+console.log(financesFlat.length);
+console.log(new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',}
+    ).format(total));
+
+
+
+
+
+
 
