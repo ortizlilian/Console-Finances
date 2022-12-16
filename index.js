@@ -87,30 +87,50 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-var numberOfMonths = finances.length;
-var total = 0
-var financesFlat = finances.flat(1);
+// Variables
+let numberOfMonths = finances.length;
+let total = 0
+let totalChanges = 0
+let averageChange = 0
 
-// for (let i = 0; i < financesFlat.length; i++) {
-//     if (typeof financesFlat[i] === Number) {
-//         total += financesFlat[i];
-//     }  
-// }
 
+// Operations
+
+// Calculate the total amount of Profit/Losses
 for (let i = 0; i < finances.length; i++) {
         total += finances[i][1];
 }
 
+// Calculate the changes month to month
+for (let i = 1; i < finances.length; i++) {
+    totalChanges += ((finances[i][1]) - (finances[i-1][1]));
+}
+
+// Calculate average change
+averageChange = totalChanges / numberOfMonths;
+
+// Results
+
+// Return number of months
 console.log(numberOfMonths);
-console.log(financesFlat.length);
+
+// Return total amout of Profit/Losses over the period
 console.log(new Intl.NumberFormat('en-GB', {
     style: 'currency',
     currency: 'GBP',}
     ).format(total));
 
+// Return total changes between months
+console.log(new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',}
+    ).format(totalChanges));
 
-
-
+// Return the average of changes over the entire period
+console.log(new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',}
+    ).format(averageChange));
 
 
 
