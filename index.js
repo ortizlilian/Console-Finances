@@ -109,7 +109,25 @@ for (let i = 1; i < finances.length; i++) {
 // Calculate average change
 averageChange = totalChanges / numberOfMonths;
 
+// Create new array with only profits
+let onlyProfits = [];
+
+for (let i = 0; i < finances.length; i++) {
+    onlyProfits.push(finances[i][1]);
+}
+
+console.log(onlyProfits);
+
+// Find the greatest increase
+
+let indexGreatestIncrease = onlyProfits.indexOf(Math.max(...onlyProfits));
+let greatestIncrease = finances[indexGreatestIncrease];
+
 // Results
+
+// Header
+console.log('Financial Analysis');
+console.log('----------------------------')
 
 // Return number of months
 console.log(numberOfMonths);
@@ -132,5 +150,11 @@ console.log(new Intl.NumberFormat('en-GB', {
     currency: 'GBP',}
     ).format(averageChange));
 
-
+// Return the greatest increase in profits
+console.log('Greatest Increase in Profits: ' + greatestIncrease[0] + ' ' + 
+new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',}
+    ).format(greatestIncrease[1])
+);
 
