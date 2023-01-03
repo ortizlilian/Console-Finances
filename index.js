@@ -123,6 +123,10 @@ console.log(onlyProfits);
 let indexGreatestIncrease = onlyProfits.indexOf(Math.max(...onlyProfits));
 let greatestIncrease = finances[indexGreatestIncrease];
 
+// Find the greatest decrease
+let indexGreatestDecrease = onlyProfits.indexOf(Math.min(...onlyProfits));
+let greatestDecrease = finances[indexGreatestDecrease];
+
 // Results
 
 // Header
@@ -158,3 +162,10 @@ new Intl.NumberFormat('en-GB', {
     ).format(greatestIncrease[1])
 );
 
+// Return the greatest decrease in profits
+console.log('Greatest Decrease in Profits: ' + greatestDecrease[0] + ' ' + 
+new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',}
+    ).format(greatestDecrease[1])
+);
