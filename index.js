@@ -111,6 +111,10 @@ averageChange = totalChanges / numberOfMonths;
 
 // Results
 
+// Header
+console.log('Financial Analysis');
+console.log('----------------------------')
+
 // Return number of months
 console.log(numberOfMonths);
 
