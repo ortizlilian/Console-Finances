@@ -134,22 +134,26 @@ console.log('Financial Analysis');
 console.log('----------------------------')
 
 // Return number of months
-console.log(numberOfMonths);
+console.log('Total Months: ' + numberOfMonths);
 
 // Return total amout of Profit/Losses over the period
-console.log(new Intl.NumberFormat('en-GB', {
+console.log('Total: ' + 
+    new Intl.NumberFormat('en-GB', {
     style: 'currency',
     currency: 'GBP',}
-    ).format(total));
+    ).format(total)
+    );
 
 // Return total changes between months
-console.log(new Intl.NumberFormat('en-GB', {
+console.log('Total  Change: ' + 
+    new Intl.NumberFormat('en-GB', {
     style: 'currency',
     currency: 'GBP',}
     ).format(totalChanges));
 
 // Return the average of changes over the entire period
-console.log(new Intl.NumberFormat('en-GB', {
+console.log('Average  Change: ' + 
+    new Intl.NumberFormat('en-GB', {
     style: 'currency',
     currency: 'GBP',}
     ).format(averageChange));
