@@ -1,13 +1,13 @@
 # Console-Finances
 Tool to analyse financial records of a company
 
-# Bootcamp Challenge `2`: Portfolio
+# Bootcamp Challenge `4`: Console Finances
 
-This repo contains a single page website that acts as a personal portfolio.
+This repo contains a single page website with a JavaScript file that generates a financial report based on the data passed to it through an array called finances.
 
-This portfolio is meant to be a working in progress and will be continually improved in the course of the EDX Trilogy Frontend Bootcamp.
+This application will eventually be improved in the future in order to both display the financial report directly onto the index.html file and accept inputs from inputs fields embedded in the hmtl.
 
-The website was deployed using GitHub Pages and can be viewed [here](https://ortizlilian.github.io/bootcamp-challenge-2/).
+The website was deployed using GitHub Pages and can be viewed [here](https://ortizlilian.github.io/Console-Finances/).
 
 ## Mockup
 
